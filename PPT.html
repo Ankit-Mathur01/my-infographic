@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India's Digital Unbundling: An Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9FA;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 400px;
+            max-height: 500px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 450px;
+            }
+        }
+        .kpi-value {
+            font-weight: 900;
+            color: #0077B6;
+        }
+        .kpi-label {
+            font-weight: 600;
+            color: #03045E;
+        }
+        .header-bg {
+            background-color: #03045E;
+        }
+        .card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        h2 {
+            font-weight: 700;
+            color: #03045E;
+            margin-bottom: 1rem;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 2.5rem;
+            padding-bottom: 2rem;
+            border-left: 4px solid #90E0EF;
+        }
+        .timeline-dot {
+            position: absolute;
+            left: -11px;
+            top: 0;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: #0077B6;
+            border: 3px solid #CAF0F8;
+        }
+        .flow-arrow {
+            font-size: 3rem;
+            line-height: 1;
+            color: #90E0EF;
+            font-weight: 900;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <header class="header-bg text-white p-8 md:p-12 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">The Great Unbundling</h1>
+        <p class="text-lg md:text-xl max-w-4xl mx-auto text-blue-100">A decade of transformation in India's media and internet landscape, shifting from traditional cable to an on-demand, internet-driven ecosystem.</p>
+    </header>
+
+    <main class="p-4 md:p-8">
+
+        <section id="kpis" class="mb-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="card text-center">
+                    <p class="kpi-value text-5xl">150M+</p>
+                    <p class="kpi-label text-xl mt-2">Paid OTT Subscribers</p>
+                    <p class="text-sm text-gray-500 mt-1">The paying user base that now drives the premium content market.</p>
+                </div>
+                <div class="card text-center">
+                    <p class="kpi-value text-5xl">-40M</p>
+                    <p class="kpi-label text-xl mt-2">Pay-TV Household Decline</p>
+                     <p class="text-sm text-gray-500 mt-1">The drop from the 2018 peak, showing significant cord-cutting.</p>
+                </div>
+                <div class="card text-center">
+                    <p class="kpi-value text-5xl">87%</p>
+                    <p class="kpi-label text-xl mt-2">FTTH Dominance</p>
+                     <p class="text-sm text-gray-500 mt-1">Fibre-to-the-Home's share of wired broadband, enabling high-speed access.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="comparison-chart" class="mb-12 max-w-5xl mx-auto">
+            <div class="card">
+                <h2 class="text-3xl text-center">A Tale of Three Services: Subscriber Trends (2015-2024)</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">This single chart encapsulates the entire story of India's digital transformation. It shows the clear decline of traditional Cable TV, the steady, foundational growth of Wired Internet, and the explosive, market-altering rise of paid OTT subscriptions.</p>
+                <div class="chart-container">
+                    <canvas id="comparisonChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section id="catalysts" class="mb-12 max-w-6xl mx-auto">
+            <div class="card">
+                <h2 class="text-3xl text-center">The Catalysts of Disruption</h2>
+                <p class="text-center text-gray-600 mb-8 max-w-3xl mx-auto">The market's evolution was supercharged by a series of pivotal events: the commoditization of data, a global pandemic, and the migration to smart TVs.</p>
+                <div class="relative">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-semibold text-blue-800">2016: The Jio Disruption</h3>
+                        <p class="text-gray-700 mt-1">Reliance Jio's entry radically dropped data prices, making mobile data affordable for millions and laying the groundwork for mass digital consumption.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-semibold text-blue-800">2020: The Pandemic Accelerator</h3>
+                        <p class="text-gray-700 mt-1">Nationwide lockdowns forced a captive audience indoors, cementing digital-first habits for work, education, and entertainment.</p>
+                    </div>
+                    <div class="timeline-item" style="border-left: 4px solid transparent;">
+                        <div class="timeline-dot"></div>
+                        <h3 class="text-xl font-semibold text-blue-800">2022-Present: The Smart TV Migration</h3>
+                        <p class="text-gray-700 mt-1">With millions of homes owning connected TVs, the OTT experience moves from the personal mobile to the primary living room screen, directly challenging cable's dominance.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ott-deep-dive" class="mb-12 max-w-7xl mx-auto">
+             <h2 class="text-3xl text-center mb-8">Deep Dive: The OTT Juggernaut</h2>
+             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl">The Monetization Gap</h3>
+                    <p class="text-gray-600 mb-4">The OTT market is defined by a massive total audience, but over 72% do not pay for content, highlighting the dominance of ad-supported models.</p>
+                    <div class="chart-container" style="max-width:400px; height:300px;">
+                        <canvas id="ottAudienceChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card">
+                    <h3 class="text-2xl">OTT Revenue Market Share (FY25)</h3>
+                     <p class="text-gray-600 mb-4">The market is a duopoly at the top. The ad-driven model of YouTube and the hybrid model of JioHotstar command over 60% of total revenue.</p>
+                    <div class="chart-container" style="height:350px;">
+                        <canvas id="ottMarketShareChart"></canvas>
+                    </div>
+                </div>
+             </div>
+        </section>
+
+        <section id="enablers" class="mb-12 max-w-7xl mx-auto">
+            <h2 class="text-3xl text-center mb-8">The Foundational Layer: Reliable Internet</h2>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div class="card">
+                    <h3 class="text-2xl">The Fiber Revolution</h3>
+                    <p class="text-gray-600 mb-4">The growth in wired internet is not just about quantity, but a massive leap in quality. Fibre-to-the-Home (FTTH) has replaced legacy technologies.</p>
+                    <div class="chart-container" style="max-width:400px; height:300px;">
+                        <canvas id="fiberTechChart"></canvas>
+                    </div>
+                </div>
+                 <div class="card">
+                    <h3 class="text-2xl">The Urban-Rural Digital Chasm</h3>
+                     <p class="text-gray-600 mb-4">Despite rapid growth, high-speed wired broadband remains a predominantly urban phenomenon, limiting quality streaming adoption in rural India.</p>
+                    <div class="chart-container" style="height:350px;">
+                        <canvas id="urbanRuralChart"></canvas>
+                    </div>
+                </div>
+             </div>
+        </section>
+        
+        <section id="causal-flow" class="mb-12 max-w-5xl mx-auto">
+            <div class="card">
+                <h2 class="text-3xl text-center">The Unbundling Effect: A Causal Chain</h2>
+                <p class="text-center text-gray-600 mb-8">The transformation wasn't a series of isolated events, but a clear chain reaction. Better, cheaper internet access directly enabled the OTT boom, which in turn caused the decline of traditional cable TV.</p>
+                <div class="flex flex-col md:flex-row items-center justify-around text-center gap-4">
+                    <div class="p-4 rounded-lg">
+                        <p class="text-6xl mb-2">🌐</p>
+                        <h3 class="text-xl font-semibold text-blue-800">Connectivity Revolution</h3>
+                        <p class="text-gray-600">Cheap 4G & reliable FTTH</p>
+                    </div>
+                    <div class="flow-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="p-4 rounded-lg">
+                        <p class="text-6xl mb-2">📺</p>
+                        <h3 class="text-xl font-semibold text-blue-800">OTT Consumption Boom</h3>
+                        <p class="text-gray-600">On-demand content explodes</p>
+                    </div>
+                     <div class="flow-arrow transform md:rotate-0 rotate-90">&rarr;</div>
+                    <div class="p-4 rounded-lg">
+                        <p class="text-6xl mb-2">🔌</p>
+                        <h3 class="text-xl font-semibold text-blue-800">Legacy Model Decline</h3>
+                        <p class="text-gray-600">Cable cord-cutting accelerates</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="text-center p-6 bg-gray-100 mt-8">
+        <p class="text-gray-600">Data synthesized from the report "The Great Unbundling".</p>
+    </footer>
+
+    <script>
+        const brilliantBlues = {
+            deepBlue: '#004AAD',
+            brightBlue: '#0077B6',
+            lightSkyBlue: '#90E0EF',
+            veryLightBlue: '#CAF0F8',
+            navy: '#03045E'
+        };
+
+        const wrapLabel = (label) => {
+            if (typeof label !== 'string' || label.length <= 16) {
+                return label;
+            }
+            const words = label.split(' ');
+            const lines = [];
+            let currentLine = '';
+            for (const word of words) {
+                if ((currentLine + ' ' + word).length > 16 && currentLine.length > 0) {
+                    lines.push(currentLine);
+                    currentLine = word;
+                } else {
+                    currentLine += (currentLine.length === 0 ? '' : ' ') + word;
+                }
+            }
+            if (currentLine.length > 0) {
+                lines.push(currentLine);
+            }
+            return lines;
+        };
+        
+        const multiLineTooltipTitle = {
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        title: function(tooltipItems) {
+                            const item = tooltipItems[0];
+                            let label = item.chart.data.labels[item.dataIndex];
+                            if (Array.isArray(label)) {
+                              return label.join(' ');
+                            } else {
+                              return label;
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
+        window.onload = function() {
+            
+            new Chart(document.getElementById('comparisonChart').getContext('2d'), {
+                type: 'line',
+                data: {
+                    labels: ['2015', '2018', '2020', '2022', '2024'],
+                    datasets: [
+                        {
+                            label: 'OTT Paid Subscribers (Millions)',
+                            data: [5, 20, 29, 130, 150.6],
+                            borderColor: brilliantBlues.deepBlue,
+                            backgroundColor: 'rgba(0, 74, 173, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'Cable TV Subscribers (Millions)',
+                            data: [77, 82, 72, 63.5, 61.5],
+                            borderColor: brilliantBlues.lightSkyBlue,
+                            backgroundColor: 'rgba(144, 224, 239, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        },
+                         {
+                            label: 'Wired Internet Subscribers (Millions)',
+                            data: [19, 21.4, 25.5, 30.1, 43.6],
+                            borderColor: brilliantBlues.brightBlue,
+                            backgroundColor: 'rgba(0, 119, 182, 0.1)',
+                            fill: true,
+                            tension: 0.4,
+                            yAxisID: 'y'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            type: 'linear',
+                            display: true,
+                            position: 'left',
+                            title: {
+                                display: true,
+                                text: 'Subscribers (in Millions)',
+                                color: brilliantBlues.navy
+                            },
+                             ticks: { color: brilliantBlues.navy },
+                             grid: { color: '#e0e0e0' }
+                        },
+                        x: {
+                            ticks: { color: brilliantBlues.navy },
+                            grid: { color: '#e0e0e0' }
+                        }
+                    },
+                    plugins: {
+                        ...multiLineTooltipTitle.plugins,
+                        legend: { position: 'bottom', labels: { color: brilliantBlues.navy, usePointStyle: true } }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('ottAudienceChart').getContext('2d'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Free/Ad-Supported Audience', 'Paid SVOD Subscribers'],
+                    datasets: [{
+                        data: [396.7, 150.6], 
+                        backgroundColor: [brilliantBlues.lightSkyBlue, brilliantBlues.deepBlue],
+                        borderColor: '#ffffff',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...multiLineTooltipTitle.plugins,
+                        legend: { position: 'bottom', labels: { color: brilliantBlues.navy } }
+                    },
+                    cutout: '60%'
+                }
+            });
+            
+            const ottMarketShareLabels = ['YouTube', 'JioHotstar', 'Netflix', 'Amazon MX Player', 'SonyLIV', 'Zee5', 'Others'].map(wrapLabel);
+            new Chart(document.getElementById('ottMarketShareChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ottMarketShareLabels,
+                    datasets: [{
+                        label: 'Revenue Market Share (%)',
+                        data: [37.7, 23.3, 7.6, 3.2, 3.0, 2.7, 22.5],
+                        backgroundColor: [brilliantBlues.deepBlue, brilliantBlues.brightBlue, brilliantBlues.lightSkyBlue, brilliantBlues.veryLightBlue, brilliantBlues.veryLightBlue, brilliantBlues.veryLightBlue, '#cccccc'],
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { ticks: { color: brilliantBlues.navy }, grid: { display: false } }, x: { ticks: { color: brilliantBlues.navy }, grid: { color: '#e0e0e0' } } },
+                    plugins: {
+                        ...multiLineTooltipTitle.plugins,
+                        legend: { display: false }
+                    }
+                }
+            });
+            
+            new Chart(document.getElementById('fiberTechChart').getContext('2d'), {
+                type: 'pie',
+                data: {
+                    labels: ['Fibre (FTTH)', 'DSL', 'Cable Modem', 'Other'],
+                    datasets: [{
+                        data: [87.03, 2.86, 1.87, 8.24],
+                        backgroundColor: [brilliantBlues.deepBlue, brilliantBlues.brightBlue, brilliantBlues.lightSkyBlue, '#cccccc'],
+                        borderColor: '#ffffff',
+                        borderWidth: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        ...multiLineTooltipTitle.plugins,
+                        legend: { position: 'bottom', labels: { color: brilliantBlues.navy } }
+                    }
+                }
+            });
+
+            new Chart(document.getElementById('urbanRuralChart').getContext('2d'), {
+                type: 'bar',
+                data: {
+                    labels: ['Urban Subscribers', 'Rural Subscribers'],
+                    datasets: [{
+                        label: 'Wired Subscribers (Millions)',
+                        data: [34.03, 2.90],
+                        backgroundColor: [brilliantBlues.deepBlue, brilliantBlues.lightSkyBlue],
+                        barThickness: 50
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    scales: { y: { beginAtZero: true, ticks: { color: brilliantBlues.navy }, grid: { color: '#e0e0e0' } }, x: { ticks: { color: brilliantBlues.navy }, grid: { display: false } } },
+                    plugins: {
+                        ...multiLineTooltipTitle.plugins,
+                        legend: { display: false }
+                    }
+                }
+            });
+        };
+    </script>
+</body>
+</html>
